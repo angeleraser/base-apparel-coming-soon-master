@@ -4,7 +4,7 @@
   --DarkGrayishRed: hsl(0, 6%, 24%);
 }
 
-@import url(https://fonts.google.com/specimen/Josefin+Sans);
+@import url('https://fonts.google.com/specimen/Josefin+Sans');
 body{
   font-size: 16px;
   height: 100%;
@@ -84,7 +84,6 @@ span{
 /* FOTO MODELO */
 .girl-picture{
   background-image: url(../images/hero-desktop.jpg);
-  background-color: rgb(138, 138, 138);
   background-size: cover;
   width: 40%;
   min-width:375px;
