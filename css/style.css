@@ -1,0 +1,214 @@
+:root{
+  --DesaturatedRed: hsl(0, 36%, 70%);
+  --SoftRed: hsl(0, 93%, 68%);
+  --DarkGrayishRed: hsl(0, 6%, 24%);
+}
+
+@import url(https://fonts.google.com/specimen/Josefin+Sans);
+body{
+  font-size: 16px;
+  height: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+  background-image:  linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 96%));
+  width: 100%;
+}
+
+input[type=submit]{
+  height: 100%;
+  opacity: 0;
+  width: 100%;
+}
+
+/* CONTENEDOR PRINCIPAL  */
+.main-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-image: url(../images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  /* max-height:800px; */
+  min-width: 360px;
+  max-width: 1444px;
+  width: 100%;
+  color: var(--DesaturatedRed);
+}
+
+/* ITEMS  */
+.flex-item{
+  width: 60%;
+}
+
+/* HEADER  */
+.main-header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 1 3;
+}
+
+/* ARTICLE CONTENEDOR  */
+.article-container{
+  flex: 3 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-container__section{
+ margin-bottom: 20px;
+}
+/* TITULO DE LA SECCION  */
+.article-container__section-title{
+  display: inline-block;
+  text-align: left;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 4.5em;
+  margin: 0;
+}
+
+/* PARRAFO DE LA SECCION  */
+.article-container__section-text{
+  line-height: 1.5;
+  width: 77%;
+}
+
+span{
+  color: var(--DarkGrayishRed);
+}
+
+/* FOTO MODELO */
+.girl-picture{
+  background-image: url(../images/hero-desktop.jpg);
+  background-color: rgb(138, 138, 138);
+  background-size: cover;
+  width: 40%;
+  min-width:375px;
+  height: 100%;
+  min-height: 250px;
+  max-height: 800px;
+}
+
+/* CONTENEDOR DEL INPUT  */
+.article-container__input-box{
+  position: relative;
+}
+
+/* INPUT  */
+.input-box__input{
+  border: 1px solid var(--DesaturatedRed);
+  text-indent: 25px;
+  color: var(--DesaturatedRed);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 80%;
+  border-radius: 25px;
+  width: 75%;
+  height: 50px;
+}
+
+.input-box__input:invalid{
+  border-color: red;
+  border-width: 2px;
+  background-image: url(../images/icon-error.svg);
+}
+
+.input-box__input::placeholder{
+  color: var(--DesaturatedRed);
+}
+
+.input-box__input:focus{
+  outline-color: var(--DesaturatedRed);
+  outline-width: 0;
+}
+
+.input-box__submit-button{
+  background-image: linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border-radius: 40px;
+  box-shadow: -1px 15px 20px rgba(3, 3, 3, .1);
+  border: none;
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right:20%;
+  width: 90px;
+}
+
+.input-box__submit-button:active{
+  transform: scale(.98);
+}
+#arrow-icon{
+  transform: translateY(70%);
+}
+
+@media screen and (max-width:768px){
+
+  .main-container{
+    flex-wrap: nowrap;
+    background-color:white;
+  }
+
+  .flex-item{
+    flex: none;
+  }
+
+  .main-header{
+    height: 12%;
+    width: 100%;
+    background-color:white;
+  }
+
+  .main-header__logo{
+    width: 45%;
+    margin-left: -20%;
+  }
+
+  .article-container{
+    justify-content: center;
+    order: 2;
+    height: 65%;
+    width: 100%;
+    background-image:  linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 96%));
+  }
+
+  .article-container__section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .girl-picture{
+    background-image: url(../images/hero-mobile.jpg);
+    width: 100%;
+  }
+
+  .article-container__section-title{
+    text-align: center;
+    font-size: 3em;
+  }
+
+  .article-container__section-text{
+    width: 85%;
+  }
+
+  .article-container__input-box{
+    width: 80%;
+  }
+
+  .input-box__input{
+    width: 100%;
+    background-position: 75%;
+  }
+
+  .input-box__submit-button{
+    right: -2%;
+    width: 70px;
+  }
+}
